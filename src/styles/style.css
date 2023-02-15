@@ -1,3 +1,30 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+button.contact-btn {
+  /* border-radius: 100rem; */
+  /* padding: 1rem; */
+  /* font-size: 1rem; */
+  /* padding: 0.5rem 3rem; */
+  /* color: black; */
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: radial-gradient(
+    230.93% 230.93% at 102.01% 2.03%,
+    #f9ed32 0%,
+    #ee2a7b 36%,
+    #d22a8a 44%,
+    #8b2ab2 60%,
+    #1b2af0 83%,
+    #002aff 88%
+  );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+}
+
+button.contact-btn:hover {
+  box-shadow: none;
+  color: white;
+}
