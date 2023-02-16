@@ -1,13 +1,13 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
-
+/* 
 button.contact-btn {
-  /* border-radius: 100rem; */
-  /* padding: 1rem; */
-  /* font-size: 1rem; */
-  /* padding: 0.5rem 3rem; */
-  /* color: black; */
+  border-radius: 100rem;
+  padding: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 3rem;
+  color: black;
   box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
   border: solid 3px transparent;
   background-image: radial-gradient(
@@ -27,4 +27,33 @@ button.contact-btn {
 button.contact-btn:hover {
   box-shadow: none;
   color: white;
+} */
+
+.card:hover .subtitle-white {
+  color: white;
+}
+
+.card:hover #position > path {
+  fill: white;
+}
+
+.card:hover #user-file > path {
+  fill: white;
+}
+
+.active {
+  background-color: #299764;
+  color: #fff;
+}
+
+.service-card:hover .p-white {
+  color: white;
+}
+
+.service-card:hover svg > path {
+  fill: white;
+}
+
+.card-bellow:hover svg > path {
+  fill: white;
 }
