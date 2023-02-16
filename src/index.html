@@ -24,7 +24,7 @@
     <!-- Swipper js -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
 
     <!-- Font Awesome -->
@@ -36,12 +36,14 @@
 
     <!-- main css -->
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- output css -->
+    <link rel="stylesheet" href="./styles/output.css" />
     <title>Car Rental</title>
   </head>
-  <body>
+  <body class="dark:bg-slate-500">
     <header class="py-7 border-[#E5E7EA] border-b-2">
       <div class="container mx-auto">
-        <nav class="nav flex items-center justify-between">
+        <nav class="nav flex items-center justify-between dark:bg-[#1C1C1C]">
           <div class="flex items-center gap-9">
             <a href="#"><img src="./images/Logo.svg" alt="Logo" /></a>
             <ul class="flex items-center text-lg font-medium">
@@ -96,9 +98,10 @@
           <div class="flex items-center gap-4">
             <p class="text-lg font-semibold mr-2">+1 855 420 0000</p>
             <div
-              class="w-[58px] h-[58px] rounded-full bg-[#F5F5F5] flex items-center justify-center cursor-pointer active:bg-[#299764] hover:text-[#000] active:text-white"
+              class="mode w-[58px] h-[58px] rounded-full bg-[#F5F5F5] flex items-center justify-center cursor-pointer active:bg-[#299764] hover:text-[#000] active:text-white"
             >
               <i
+              id="mode-icon"
                 class="bx bxs-moon text-xl text-[#555] hover:text-[#000] active:text-white"
               ></i>
             </div>
@@ -187,45 +190,134 @@
     <main class="mt-5">
       <section class="intro">
         <div class="container mx-auto">
-          <div
-            class="h-[500px] w-full relative mx-auto flex justify-center z-10"
-          >
-            <div
-              class="absolute z-20 w-full h-full rounded-3xl"
-              style="
-                background: linear-gradient(
-                  180deg,
-                  rgba(0, 0, 0, 0.6) 6.19%,
-                  rgba(0, 0, 0, 0) 54.63%
-                );
-              "
-            ></div>
-            <img
-              class="rounded-3xl absolute z-10 w-full"
-              src="./images/karusel-car.png"
-              alt=""
-            />
-            <div class="absolute flex flex-col items-center gap-3 top-14 z-30">
-              <h1 class="text-4xl text-white font-semibold">Compact cars</h1>
-              <p class="text-white w-[416px] text-center">
-                Rent cars as you are comfortable and where you are comfortable.
-              </p>
+          <div class="swiper mySwiper rounded-3xl">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide h-[500px] w-full relative mx-auto flex justify-center z-10"
+              >
+                <div
+                  class="absolute z-20 w-full h-full rounded-3xl"
+                  style="
+                    background: linear-gradient(
+                      180deg,
+                      rgba(0, 0, 0, 0.6) 6.19%,
+                      rgba(0, 0, 0, 0) 54.63%
+                    );
+                  "
+                ></div>
+                <img
+                  class="rounded-3xl absolute z-10 w-full"
+                  src="./images/karusel-car.png"
+                  alt=""
+                />
+                <div
+                  class="absolute flex flex-col items-center gap-3 top-14 z-30"
+                >
+                  <h1 class="text-4xl text-white font-semibold">
+                    Compact cars
+                  </h1>
+                  <p class="text-white w-[416px] text-center">
+                    Rent cars as you are comfortable and where you are
+                    comfortable.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide h-[500px] w-full relative mx-auto flex justify-center z-10"
+              >
+                <div
+                  class="absolute z-20 w-full h-full rounded-3xl"
+                  style="
+                    background: linear-gradient(
+                      180deg,
+                      rgba(0, 0, 0, 0.6) 6.19%,
+                      rgba(0, 0, 0, 0) 54.63%
+                    );
+                  "
+                ></div>
+                <img
+                  class="rounded-3xl absolute z-10 w-full"
+                  src="./images/karusel-2.png"
+                  alt=""
+                />
+                <div
+                  class="absolute flex flex-col items-center gap-3 top-14 z-30"
+                >
+                  <h1 class="text-4xl text-white font-semibold">Sports cars</h1>
+                  <p class="text-white w-[416px] text-center">
+                    Rent cars as you are comfortable and where you are
+                    comfortable.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="swiper-slide h-[500px] w-full relative mx-auto flex justify-center z-10"
+              >
+                <div
+                  class="absolute z-20 w-full h-full rounded-3xl"
+                  style="
+                    background: linear-gradient(
+                      180deg,
+                      rgba(0, 0, 0, 0.6) 6.19%,
+                      rgba(0, 0, 0, 0) 54.63%
+                    );
+                  "
+                ></div>
+                <img
+                  class="rounded-3xl absolute z-10 w-full"
+                  src="./images/karusel-3.png"
+                  alt=""
+                />
+                <div
+                  class="absolute flex flex-col items-center gap-3 top-14 z-30"
+                >
+                  <h1 class="text-4xl text-white font-semibold">Vans</h1>
+                  <p class="text-white w-[416px] text-center">
+                    Rent cars as you are comfortable and where you are
+                    comfortable.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div
-              class="w-[600px] h-[66px] absolute z-40 -bottom-16 shadow bg-white rounded-full flex items-center justify-around"
+              class="w-[84px] absolute bottom-10 right-10 z-10 flex items-center justify-between"
             >
-              <input
-                type="text"
-                placeholder="Find the car of your dreams"
-                class="w-[80%] mx-5 outline-none placeholder:text-[#555] placeholder:text-lg placeholder:font-medium"
-              />
               <div
-                class="w-[58px] h-[58px] rounded-full bg-[#299764] flex items-center justify-center cursor-pointer text-white hover:bg-[#077743] active:bg-[#F5F5F5] active:text-black"
+                class="w-9 h-9 swiper-prev rounded-full z-10 bg-white hover:bg-[#cbcaca] cursor-pointer flex items-center justify-center"
               >
-                <!-- <img src="./images/icons/search.svg" alt="" /> -->
-                <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                <i class="bx bx-chevron-left text-xl text-black"></i>
               </div>
+              <div
+                class="w-9 h-9 swiper-next rounded-full z-10 bg-white hover:bg-[#cbcaca] cursor-pointer flex items-center justify-center"
+              >
+                <i class="bx bx-chevron-right text-xl text-black"></i>
+              </div>
+            </div>
+
+            <div class="swiper-pagination">
+              <div
+                class="pagin flex justify-start items-start w-[100px] absolute left-10 bottom-[46px]"
+              >
+                <!-- dinamic pagin elements -->
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="w-[600px] h-[66px] absolute z-40 left-[450px] bottom-7 shadow bg-white rounded-full flex items-center justify-around"
+          >
+            <input
+              type="text"
+              placeholder="Find the car of your dreams"
+              class="w-[80%] mx-5 outline-none placeholder:text-[#555] placeholder:text-lg placeholder:font-medium"
+            />
+            <div
+              class="w-[58px] h-[58px] rounded-full bg-[#299764] flex items-center justify-center cursor-pointer text-white hover:bg-[#077743] active:bg-[#F5F5F5] active:text-black"
+            >
+              <i class="fa-solid fa-magnifying-glass text-lg"></i>
             </div>
           </div>
         </div>
@@ -266,7 +358,7 @@
           ></div>
           <div class="flex justify-center mt-[58px]">
             <button
-              class="bg-[#299764] px-[30px] py-[18px] rounded-full text-white text-lg font-medium"
+              class="bg-[#299764] px-[30px] py-[18px] rounded-full text-white text-lg font-medium hover:bg-[#1f744c] active:bg-[#F5F5F5] active:text-black"
             >
               View all cars
             </button>
@@ -307,11 +399,37 @@
                 More interesting reviews on Instagram
               </p>
 
-              <button
-                class="contact-btn mt-4 px-[50px] py-[18px] border rounded-full"
+              <div
+                class="w-[194px] h-[58px] flex items-center justify-center mt-4 rounded-full"
+                style="
+                  background: radial-gradient(
+                    230.93% 230.93% at 102.01% 2.03%,
+                    #f9ed32 0%,
+                    #ee2a7b 36%,
+                    #d22a8a 44%,
+                    #8b2ab2 60%,
+                    #1b2af0 83%,
+                    #002aff 88%
+                  );
+                "
               >
-                Instagram
-              </button>
+                <button
+                  class="contact-btn px-[53px] py-[15px] bg-white rounded-full hover:bg-transparent hover:text-white hover:duration-300"
+                  style="
+                    color: radial-gradient(
+                      230.93% 230.93% at 102.01% 2.03%,
+                      #f9ed32 0%,
+                      #ee2a7b 36%,
+                      #d22a8a 44%,
+                      #8b2ab2 60%,
+                      #1b2af0 83%,
+                      #002aff 88%
+                    );
+                  "
+                >
+                  Instagram
+                </button>
+              </div>
             </div>
 
             <div
@@ -470,7 +588,7 @@
 
           <div class="flex flex-wrap gap-5 justify-center mt-10">
             <div
-              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white"
+              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
             >
               <div>
                 <h2 class="font-medium text-[32px] w-[211px]">
@@ -498,7 +616,7 @@
             </div>
 
             <div
-              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white"
+              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
             >
               <div>
                 <h2 class="font-medium text-[32px] w-[260px]">
@@ -524,7 +642,7 @@
             </div>
 
             <div
-              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white"
+              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
             >
               <div>
                 <h2 class="font-medium text-[32px] w-[278px]">
@@ -563,7 +681,7 @@
             </div>
 
             <div
-              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white"
+              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
             >
               <div>
                 <h2 class="font-medium text-[32px] w-[288px]">
@@ -619,7 +737,7 @@
 
               <div class="flex gap-[10px]">
                 <div
-                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] rounded-2xl hover:text-white hover:bg-[#299764]"
+                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] rounded-2xl hover:text-white hover:bg-[#299764] hover:duration-300"
                 >
                   <div class="flex justify-end">
                     <svg
@@ -644,7 +762,7 @@
                 </div>
 
                 <div
-                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] rounded-2xl hover:text-white hover:bg-[#299764]"
+                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] rounded-2xl hover:text-white hover:bg-[#299764] hover:duration-300"
                 >
                   <div class="flex justify-end">
                     <svg
@@ -671,7 +789,7 @@
                 </div>
 
                 <div
-                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] rounded-2xl hover:text-white hover:bg-[#299764]"
+                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] rounded-2xl hover:text-white hover:bg-[#299764] hover:duration-300"
                 >
                   <div class="flex justify-end">
                     <svg
@@ -717,8 +835,8 @@
     </main>
 
     <footer class="border-t mt-[160px] py-10">
-      <div class="container mx-auto">
-        <div>
+      <div class="container mx-auto flex gap-[65px]">
+        <div class="">
           <img src="./images/Logo.svg" alt="" />
           <p class="text-[#555] text-xs w-[240px] mt-5">
             Car rental offers a wide range of cars available for rent in Newark
@@ -730,19 +848,177 @@
             © 2022 Car rental Terms & Conditions
           </p>
         </div>
+
+        <div class="flex flex-col gap-10 w-full">
+          <div class="flex gap-[110px]">
+            <ul class="flex flex-col gap-3">
+              <li class="font-medium mb-1">Main</li>
+              <li class="text-[#555]"><a href="#">My Bookings</a></li>
+              <li class="text-[#555]"><a href="#">Reservation</a></li>
+            </ul>
+
+            <ul class="flex flex-col gap-3">
+              <li class="font-medium mb-1">Categories</li>
+              <li class="text-[#555]"><a href="#">Compact</a></li>
+              <li class="text-[#555]"><a href="#">Sports cars</a></li>
+              <li class="text-[#555]"><a href="#">Vans</a></li>
+            </ul>
+
+            <ul class="flex flex-col gap-3">
+              <li class="font-medium mb-1">Company</li>
+              <li class="text-[#555]"><a href="#">About us</a></li>
+              <li class="text-[#555]"><a href="#">Careers</a></li>
+              <li class="text-[#555]"><a href="#">News</a></li>
+              <li class="text-[#555]"><a href="#">Contact us</a></li>
+            </ul>
+
+            <ul class="flex flex-col gap-3">
+              <li class="font-medium mb-1">Our Locations</li>
+              <li class="text-[#555]">2118 Thornridge Cir. Syracuse</li>
+              <li class="text-[#555]">4140 Parker Rd. Allentown</li>
+              <li class="text-[#555]">4517 Washington Ave.</li>
+            </ul>
+          </div>
+
+          <hr class="" />
+
+          <div class="flex gap-11">
+            <ul class="flex flex-col gap-3">
+              <li class="font-medium mb-1">Contact</li>
+              <li class="text-[#555]">+1 855 420 0000</li>
+              <li class="text-[#555]">carrental@gmail.com</li>
+            </ul>
+
+            <ul class="flex flex-col gap-3 mr-2">
+              <li class="font-medium mb-1">Hours of operation</li>
+              <li class="text-[#555]">8:00 - 21:00 Mon-Sat</li>
+              <li class="text-[#555]">9:00 - 15:00 Sundays</li>
+            </ul>
+
+            <ul class="flex flex-col gap-[22px] mr-[223px]">
+              <li class="font-medium mb-1">Social network</li>
+              <li>
+                <ul class="flex gap-[15px]">
+                  <li
+                    class="insta flex items-center justify-center w-10 h-10 rounded-full bg-black"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 1.80723C12.6506 1.80723 13.0121 1.80723 14.0964 1.80723C15.0602 1.80723 15.5422 2.04819 15.9036 2.16868C16.3855 2.40964 16.747 2.53012 17.1084 2.89157C17.4699 3.25301 17.7108 3.61446 17.8313 4.09639C17.9518 4.45783 18.0723 4.93976 18.1928 5.90362C18.1928 6.98795 18.1928 7.22892 18.1928 10C18.1928 12.7711 18.1928 13.0121 18.1928 14.0964C18.1928 15.0602 17.9518 15.5422 17.8313 15.9036C17.5904 16.3855 17.4699 16.747 17.1084 17.1084C16.747 17.4699 16.3855 17.7108 15.9036 17.8313C15.5422 17.9518 15.0602 18.0723 14.0964 18.1928C13.0121 18.1928 12.7711 18.1928 10 18.1928C7.22892 18.1928 6.98795 18.1928 5.90362 18.1928C4.93976 18.1928 4.45783 17.9518 4.09639 17.8313C3.61446 17.5904 3.25301 17.4699 2.89157 17.1084C2.53012 16.747 2.28916 16.3855 2.16868 15.9036C2.04819 15.5422 1.92771 15.0602 1.80723 14.0964C1.80723 13.0121 1.80723 12.7711 1.80723 10C1.80723 7.22892 1.80723 6.98795 1.80723 5.90362C1.80723 4.93976 2.04819 4.45783 2.16868 4.09639C2.40964 3.61446 2.53012 3.25301 2.89157 2.89157C3.25301 2.53012 3.61446 2.28916 4.09639 2.16868C4.45783 2.04819 4.93976 1.92771 5.90362 1.80723C6.98795 1.80723 7.3494 1.80723 10 1.80723ZM10 0C7.22892 0 6.98795 0 5.90362 0C4.81928 0 4.09639 0.240965 3.49398 0.481928C2.89157 0.722892 2.28916 1.08434 1.68675 1.68675C1.08434 2.28916 0.843374 2.77109 0.481928 3.49398C0.240965 4.09639 0.120482 4.81928 0 5.90362C0 6.98795 0 7.3494 0 10C0 12.7711 0 13.0121 0 14.0964C0 15.1807 0.240965 15.9036 0.481928 16.506C0.722892 17.1084 1.08434 17.7108 1.68675 18.3133C2.28916 18.9157 2.77109 19.1566 3.49398 19.5181C4.09639 19.759 4.81928 19.8795 5.90362 20C6.98795 20 7.3494 20 10 20C12.6506 20 13.0121 20 14.0964 20C15.1807 20 15.9036 19.759 16.506 19.5181C17.1084 19.2771 17.7108 18.9157 18.3133 18.3133C18.9157 17.7108 19.1566 17.2289 19.5181 16.506C19.759 15.9036 19.8795 15.1807 20 14.0964C20 13.0121 20 12.6506 20 10C20 7.3494 20 6.98795 20 5.90362C20 4.81928 19.759 4.09639 19.5181 3.49398C19.2771 2.89157 18.9157 2.28916 18.3133 1.68675C17.7108 1.08434 17.2289 0.843374 16.506 0.481928C15.9036 0.240965 15.1807 0.120482 14.0964 0C13.0121 0 12.7711 0 10 0Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M10 4.81928C7.10843 4.81928 4.81928 7.10843 4.81928 10C4.81928 12.8916 7.10843 15.1807 10 15.1807C12.8916 15.1807 15.1807 12.8916 15.1807 10C15.1807 7.10843 12.8916 4.81928 10 4.81928ZM10 13.3735C8.19277 13.3735 6.62651 11.9277 6.62651 10C6.62651 8.19277 8.07229 6.62651 10 6.62651C11.8072 6.62651 13.3735 8.07229 13.3735 10C13.3735 11.8072 11.8072 13.3735 10 13.3735Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M15.3012 5.90362C15.9666 5.90362 16.506 5.3642 16.506 4.6988C16.506 4.03339 15.9666 3.49398 15.3012 3.49398C14.6358 3.49398 14.0964 4.03339 14.0964 4.6988C14.0964 5.3642 14.6358 5.90362 15.3012 5.90362Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </li>
+                  <li
+                    class="tweeter flex items-center justify-center w-10 h-10 rounded-full bg-black"
+                  >
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.6 1.89999C18.9 2.19999 18.1 2.4 17.3 2.5C18.1 2 18.8 1.2 19.1 0.300003C18.3 0.800003 17.5 1.1 16.5 1.3C15.8 0.500003 14.7 0 13.6 0C11.4 0 9.59999 1.8 9.59999 4C9.59999 4.3 9.6 4.59999 9.7 4.89999C6.4 4.69999 3.39999 3.1 1.39999 0.699997C1.09999 1.3 0.899994 2 0.899994 2.7C0.899994 4.1 1.6 5.3 2.7 6C2 6 1.39999 5.8 0.899994 5.5C0.899994 7.4 2.29999 9.09999 4.09999 9.39999C3.79999 9.49999 3.4 9.5 3 9.5C2.7 9.5 2.5 9.49999 2.2 9.39999C2.7 11 4.2 12.2 6 12.2C4.6 13.3 2.9 13.9 1 13.9C0.7 13.9 0.4 13.9 0 13.8C1.8 14.9 3.9 15.6 6.2 15.6C13.6 15.6 17.6 9.5 17.6 4.2V3.7C18.4 3.4 19.1 2.69999 19.6 1.89999Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </li>
+                  <li
+                    class="facebook flex items-center justify-center w-10 h-10 rounded-full bg-black"
+                  >
+                    <svg
+                      width="12"
+                      height="23"
+                      viewBox="0 0 12 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.65708 12.3648H11.3793L11.9637 8.56055H7.65632V6.48134C7.65632 4.90099 8.16957 3.49962 9.63891 3.49962H12V0.179741C11.5852 0.123382 10.7078 0 9.04996 0C5.58819 0 3.55867 1.8393 3.55867 6.0297V8.56055H0V12.3648H3.55867V22.821C4.26344 22.9276 4.97729 23 5.71007 23C6.37245 23 7.01893 22.9391 7.65708 22.8522V12.3648Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </li>
+                  <li
+                    class="whatsup flex items-center justify-center w-10 h-10 rounded-full bg-black"
+                  >
+                    <svg
+                      width="21"
+                      height="21"
+                      viewBox="0 0 21 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.9268 3.0625C15.9512 1.09375 13.3171 0 10.5366 0C4.7561 0 0.0731696 4.66667 0.0731696 10.4271C0.0731696 12.25 0.585366 14.0729 1.46341 15.6042L0 21L5.56098 19.5417C7.09756 20.3438 8.78049 20.7812 10.5366 20.7812C16.3171 20.7812 21 16.1146 21 10.3542C20.9268 7.65625 19.9024 5.03125 17.9268 3.0625ZM15.5854 14.1458C15.3659 14.7292 14.3415 15.3125 13.8293 15.3854C13.3902 15.4583 12.8049 15.4583 12.2195 15.3125C11.8537 15.1667 11.3415 15.0208 10.7561 14.7292C8.12195 13.6354 6.43903 11.0104 6.29268 10.7917C6.14634 10.6458 5.19512 9.40625 5.19512 8.09375C5.19512 6.78125 5.85366 6.19792 6.07317 5.90625C6.29268 5.61458 6.58536 5.61458 6.80488 5.61458C6.95122 5.61458 7.17073 5.61458 7.31707 5.61458C7.46341 5.61458 7.68293 5.54167 7.90244 6.05208C8.12195 6.5625 8.63414 7.875 8.70731 7.94792C8.78049 8.09375 8.78049 8.23958 8.70731 8.38542C8.63414 8.53125 8.56097 8.67708 8.41463 8.82292C8.26829 8.96875 8.12195 9.1875 8.04878 9.26042C7.90244 9.40625 7.7561 9.55208 7.90244 9.77083C8.04878 10.0625 8.56097 10.8646 9.36585 11.5937C10.3902 12.4687 11.1951 12.7604 11.4878 12.9063C11.7805 13.0521 11.9268 12.9792 12.0732 12.8333C12.2195 12.6875 12.7317 12.1042 12.878 11.8125C13.0244 11.5208 13.2439 11.5938 13.4634 11.6667C13.6829 11.7396 15 12.3958 15.2195 12.5417C15.5122 12.6875 15.6585 12.7604 15.7317 12.8333C15.8049 13.0521 15.8049 13.5625 15.5854 14.1458Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <a href="#">
+              <div
+                class="w-[70px] h-[70px] rounded-full bg-[#299764] flex items-center justify-center"
+              >
+                <img src="./images/icons/arrow-up.svg" alt="" />
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
 
   <div>
+    <!-- Swipper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
+        },
+
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: true,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+      });
+    </script>
+
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/67beb88a2a.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Swipper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- data js -->
     <script src="./scripts/data.js"></script>

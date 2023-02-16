@@ -37,6 +37,14 @@ button.contact-btn:hover {
   fill: white;
 }
 
+.card:hover #user > path {
+  fill: white;
+}
+
+.card:hover #drop > path {
+  fill: white;
+}
+
 .card:hover #user-file > path {
   fill: white;
 }
@@ -57,3 +65,28 @@ button.contact-btn:hover {
 .card-bellow:hover svg > path {
   fill: white;
 }
+
+.insta:hover {
+  background: radial-gradient(
+    230.93% 230.93% at 102.01% 2.03%,
+    #f9ed32 0%,
+    #ee2a7b 36%,
+    #d22a8a 44%,
+    #8b2ab2 60%,
+    #1b2af0 83%,
+    #002aff 88%
+  );
+}
+
+.tweeter:hover {
+  background: #55ace3;
+}
+
+.facebook:hover {
+  background: #0b84ee;
+}
+
+.whatsup:hover {
+  background: #48c95f;
+}
+

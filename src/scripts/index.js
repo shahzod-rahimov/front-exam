@@ -10,6 +10,9 @@ const compactBtn = document.querySelector(".compact");
 const sportCarsBtn = document.querySelector(".sport-cars");
 const vansBtn = document.querySelector(".vans");
 
+const mode = document.querySelector(".mode");
+const modeIcon = document.querySelector("#mode-icon");
+
 aboutUs.addEventListener("mouseover", (e) => {
   dropdownAbout.classList.remove("hidden");
 });
@@ -81,7 +84,13 @@ function createCars(arr) {
               <div class="flex gap-[68px]">
                 <div class="flex items-center gap-[15px]">
                   <!-- <img src="./images/icons/user-black.svg" alt="" /> -->
-                  <i class="fa-solid fa-user-large text-xs"></i>
+                  <!-- <i class="fa-solid fa-user-large text-xs"></i> -->
+
+                  <svg id="user" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.99996 0.125C5.27407 0.125 3.87496 1.52411 3.87496 3.25C3.87496 4.97589 5.27407 6.375 6.99996 6.375C8.72585 6.375 10.125 4.97589 10.125 3.25C10.125 1.52411 8.72585 0.125 6.99996 0.125Z" fill="black"/>
+                  <path d="M3.66663 8.04167C1.94074 8.04167 0.541626 9.44078 0.541626 11.1667V12.1569C0.541626 12.7846 0.996529 13.3198 1.61602 13.4209C5.18171 14.0031 8.81821 14.0031 12.3839 13.4209C13.0034 13.3198 13.4583 12.7846 13.4583 12.1569V11.1667C13.4583 9.44078 12.0592 8.04167 10.3333 8.04167H10.0492C9.89549 8.04167 9.74271 8.06598 9.59657 8.1137L8.8753 8.34921C7.65673 8.74712 6.34319 8.74712 5.12462 8.34921L4.40335 8.1137C4.2572 8.06598 4.10443 8.04167 3.95068 8.04167H3.66663Z" fill="black"/>
+                  </svg>
+
                   <p class="font-medium">5 Seats</p>
                 </div>
                 <div class="flex items-center gap-[15px]">
@@ -95,7 +104,7 @@ function createCars(arr) {
                 </div>
               </div>
 
-              <div class="flex items-center gap-[51px]">
+              <div class="flex items-center gap-[55px]">
                 <div class="flex gap-[15px]">
                   <!-- <img src="./images/icons/zip-user-black.svg" alt="" /> -->
                   <!-- <i class="fa-solid fa-file-user"></i>  -->
@@ -109,7 +118,13 @@ function createCars(arr) {
                 </div>
                 <div class="flex items-center gap-[15px]">
                   <!-- <img src="./images/icons/liquid-black.svg" alt="" /> -->
-                  <i class='bx bxs-droplet'></i>
+                  <!-- <i class='bx bxs-droplet'></i> --> 
+
+                  <svg id="drop" width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 8.54991C11 11.4909 8.62151 13.875 5.6875 13.875C2.75349 13.875 0.375 11.4909 0.375 8.54991C0.375 5.60897 5.6875 0.125 5.6875 0.125C5.6875 0.125 11 5.60897 11 8.54991Z" fill="black"/>
+                  </svg>
+
+
                   <p class="font-medium">1-lit / 2.5 km</p>
                 </div>
               </div>
@@ -117,7 +132,7 @@ function createCars(arr) {
 
     const car = createElement(
       "div",
-      "card w-[387px] bg-[#F5F5F5] p-6 rounded-2xl hover:bg-[#299764] hover:text-white",
+      "card w-[387px] bg-[#F5F5F5] p-6 rounded-2xl hover:bg-[#299764] hover:text-white hover:duration-500",
       context
     );
 
@@ -126,3 +141,34 @@ function createCars(arr) {
 }
 
 createCars(compactCars);
+
+if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  document.documentElement.classList.add("dark");
+  localStorage.theme = "dark";
+  modeIcon.classList.remove("bxs-moon");
+  modeIcon.classList.add("bxs-sun");
+} else {
+  document.documentElement.classList.remove("dark");
+  localStorage.theme = "light";
+  modeIcon.classList.remove("bxs-sun");
+  modeIcon.classList.add("bxs-moon");
+}
+
+
+mode.addEventListener("click", (e) => {
+  if (localStorage.theme === "dark") {
+    document.documentElement.classList.remove("dark");
+    localStorage.theme = "light";
+    modeIcon.classList.remove("bxs-sun");
+    modeIcon.classList.add("bxs-moon");
+  } else {
+    document.documentElement.classList.add("dark");
+    localStorage.theme = "dark";
+    modeIcon.classList.remove("bxs-moon");
+    modeIcon.classList.add("bxs-sun");
+  }
+});
