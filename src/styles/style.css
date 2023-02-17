@@ -66,7 +66,26 @@ button.contact-btn:hover {
   fill: white;
 }
 
-.insta:hover {
+.insta {
+  background: radial-gradient(
+    230.93% 230.93% at 102.01% 2.03%,
+    #f9ed32 0%,
+    #ee2a7b 36%,
+    #d22a8a 44%,
+    #8b2ab2 60%,
+    #1b2af0 83%,
+    #002aff 88%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-btn:hover .insta {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.insta__icon:hover {
   background: radial-gradient(
     230.93% 230.93% at 102.01% 2.03%,
     #f9ed32 0%,
@@ -90,3 +109,6 @@ button.contact-btn:hover {
   background: #48c95f;
 }
 
+.white > path {
+  fill: white;
+}

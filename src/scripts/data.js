@@ -86,3 +86,24 @@ const vanCars = [
     img: "./images/chevy-silverado.png",
   },
 ];
+
+const branImages = [
+  {
+    img: "./images/ford.png",
+  },
+  {
+    img: "./images/nissan.png",
+  },
+  {
+    img: "./images/toyota.png",
+  },
+  {
+    img: "./images/dodge.png",
+  },
+  {
+    img: "./images/hyundai.png",
+  },
+  {
+    img: "./images/jeep.png",
+  },
+];

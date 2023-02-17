@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -40,54 +40,56 @@
     <link rel="stylesheet" href="./styles/output.css" />
     <title>Car Rental</title>
   </head>
-  <body class="dark:bg-slate-500">
-    <header class="py-7 border-[#E5E7EA] border-b-2">
+  <body class="dark:bg-[#1C1C1C]">
+    <header class="py-7 border-[#E5E7EA] border-b-2 dark:border-[#333]">
       <div class="container mx-auto">
         <nav class="nav flex items-center justify-between dark:bg-[#1C1C1C]">
           <div class="flex items-center gap-9">
             <a href="#"><img src="./images/Logo.svg" alt="Logo" /></a>
-            <ul class="flex items-center text-lg font-medium">
-              <li class="py-[18px] px-4 hover:bg-[#F5F5F5] hover:rounded-full">
+            <ul class="flex items-center text-lg font-medium dark:text-white">
+              <li
+                class="py-[18px] px-4 hover:bg-[#F5F5F5] hover:rounded-full dark:hover:bg-[#2c2c2c]"
+              >
                 <a href="#">Categories</a>
               </li>
               <li
-                class="about-us flex items-center gap-3 relative cursor-pointer py-[18px] px-4 hover:bg-[#F5F5F5] hover:rounded-full"
+                class="about-us flex items-center gap-3 relative cursor-pointer py-[18px] px-4 hover:bg-[#F5F5F5] hover:rounded-full dark:hover:bg-[#2c2c2c]"
               >
                 <a href="#">About Us</a> <i class="bx bx-chevron-down"></i>
                 <ul
-                  class="dropdown-about z-50 hidden absolute top-14 -left-1 p-[10px] bg-white shadow rounded-3xl"
+                  class="dropdown-about z-50 hidden absolute top-14 -left-1 p-[10px] bg-white shadow rounded-3xl dark:bg-[#1c1c1c]"
                 >
                   <li
-                    class="py-[18px] px-[22px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white"
+                    class="py-[18px] px-[22px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white dark:hover:bg-[#2c2c2c]"
                   >
                     <a href="#">News</a>
                   </li>
                   <li
-                    class="py-[18px] px-[22px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white"
+                    class="py-[18px] px-[22px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white dark:hover:bg-[#2c2c2c]"
                   >
                     <a href="#">Careers</a>
                   </li>
                   <li
-                    class="py-[18px] px-[22px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white"
+                    class="py-[18px] px-[22px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white dark:hover:bg-[#2c2c2c]"
                   >
                     <a href="#">Locations</a>
                   </li>
                 </ul>
               </li>
               <li
-                class="help-center flex items-center gap-3 relative cursor-pointer py-[18px] px-4 hover:bg-[#F5F5F5] hover:rounded-full"
+                class="help-center flex items-center gap-3 relative cursor-pointer py-[18px] px-4 hover:bg-[#F5F5F5] hover:rounded-full dark:hover:bg-[#2c2c2c]"
               >
                 <a href="#">Help center</a> <i class="bx bx-chevron-down"></i>
                 <ul
-                  class="dropdown-help z-50 hidden absolute top-14 -left-1 p-[10px] bg-white shadow rounded-3xl w-[169px]"
+                  class="dropdown-help z-50 hidden absolute top-14 -left-1 p-[10px] bg-white shadow rounded-3xl w-[169px] dark:bg-[#1c1c1c]"
                 >
                   <li
-                    class="py-[18px] px-[16px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white"
+                    class="py-[18px] px-[16px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white dark:hover:bg-[#2c2c2c]"
                   >
                     <a href="#">FAQ</a>
                   </li>
                   <li
-                    class="py-[18px] px-[16px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white"
+                    class="py-[18px] px-[16px] hover:bg-[#F5F5F5] hover:rounded-full active:bg-[#299764] active:text-white dark:hover:bg-[#2c2c2c]"
                   >
                     <a href="#">Contact us</a>
                   </li>
@@ -96,12 +98,14 @@
             </ul>
           </div>
           <div class="flex items-center gap-4">
-            <p class="text-lg font-semibold mr-2">+1 855 420 0000</p>
+            <p class="text-lg font-semibold mr-2 dark:text-white">
+              +1 855 420 0000
+            </p>
             <div
               class="mode w-[58px] h-[58px] rounded-full bg-[#F5F5F5] flex items-center justify-center cursor-pointer active:bg-[#299764] hover:text-[#000] active:text-white"
             >
               <i
-              id="mode-icon"
+                id="mode-icon"
                 class="bx bxs-moon text-xl text-[#555] hover:text-[#000] active:text-white"
               ></i>
             </div>
@@ -124,17 +128,17 @@
         class="modal-window bg-[#0000007e] w-full min-h-screen fixed top-0 z-50 hidden"
       >
         <div
-          class="login-page w-[590px] h-[483px] bg-white shadow mx-auto px-32px py-[40px] mt-20 rounded-[20px] relative"
+          class="login-page w-[590px] h-[483px] bg-white dark:bg-[#1c1c1c] dark:text-white shadow mx-auto px-32px py-[40px] mt-20 rounded-[20px] relative"
         >
           <div class="flex items-center justify-around">
             <div class="text-center">
               <h1 class="text-4xl font-semibold">Login</h1>
-              <p class="text-[#555] mt-[10px]">
+              <p class="text-[#555] mt-[10px] dark:text-white">
                 Use the email and password that you login
               </p>
             </div>
             <button
-              class="exit w-[58px] h-[58px] rounded-full bg-[#F5F5F5] font-semibold absolute right-6 top-6 active:bg-[#1f744c] active:text-white"
+              class="exit w-[58px] h-[58px] rounded-full bg-[#F5F5F5] font-semibold absolute right-6 top-6 active:bg-[#1f744c] active:text-white dark:bg-[#2c2c2c]"
             >
               x
             </button>
@@ -149,7 +153,10 @@
                 id="email"
               />
             </label>
-            <label for="password" class="w-[80%] relative border rounded-full">
+            <label
+              for="password"
+              class="w-[80%] relative border rounded-full bg-white"
+            >
               <input
                 type="password"
                 placeholder="Password"
@@ -323,13 +330,13 @@
         </div>
       </section>
 
-      <section class="catalog mt-[180px]">
+      <section class="catalog mt-[180px] dark:text-white">
         <div class="container mx-auto">
           <div class="flex flex-col items-center gap-[10px]">
             <h2 class="text-4xl font-semibold">
               Choose the car of your dreams
             </h2>
-            <p class="w-[575px] text-center text-[#555]">
+            <p class="w-[575px] text-center text-[#555] dark:text-white">
               We provide our customers with the most incredible driving
               emotions. That is why there are only world-class cars in our fleet
             </p>
@@ -337,17 +344,17 @@
 
           <div class="flex gap-[16px] justify-center mt-[40px]">
             <button
-              class="compact px-[40px] py-[19px] border rounded-full font-semibold active"
+              class="compact px-[40px] py-[19px] border dark:border-[#333] rounded-full font-semibold active"
             >
               Compact
             </button>
             <button
-              class="sport-cars px-[40px] py-[19px] border rounded-full font-semibold"
+              class="sport-cars px-[40px] py-[19px] border dark:border-[#333] rounded-full font-semibold"
             >
               Sports cars
             </button>
             <button
-              class="vans px-[40px] py-[19px] border rounded-full font-semibold"
+              class="vans px-[40px] py-[19px] border dark:border-[#333] rounded-full font-semibold"
             >
               Vans
             </button>
@@ -366,10 +373,14 @@
         </div>
       </section>
 
-      <section class="comments bg-[#F5F5F5] py-[100px] mt-[160px]">
+      <section
+        class="comments bg-[#F5F5F5] dark:bg-[#272727] py-[100px] mt-[160px]"
+      >
         <div class="container mx-auto">
           <div class="flex justify-center">
-            <div class="bg-white p-[70px] rounded-l-[20px] w-[40%]">
+            <div
+              class="bg-white dark:bg-[#1C1C1C] dark:text-white p-[70px] rounded-l-[20px] w-[40%]"
+            >
               <p
                 class="flex gap-2 items-center font-medium text-base text-[#4285F4]"
               >
@@ -395,7 +406,9 @@
                 "
               />
 
-              <p class="text-[#555] text-sm font-medium mt-[30px]">
+              <p
+                class="text-[#555] text-sm font-medium mt-[30px] dark:text-white"
+              >
                 More interesting reviews on Instagram
               </p>
 
@@ -415,19 +428,8 @@
               >
                 <button
                   class="contact-btn px-[53px] py-[15px] bg-white rounded-full hover:bg-transparent hover:text-white hover:duration-300"
-                  style="
-                    color: radial-gradient(
-                      230.93% 230.93% at 102.01% 2.03%,
-                      #f9ed32 0%,
-                      #ee2a7b 36%,
-                      #d22a8a 44%,
-                      #8b2ab2 60%,
-                      #1b2af0 83%,
-                      #002aff 88%
-                    );
-                  "
                 >
-                  Instagram
+                  <span class="insta">Instagram</span>
                 </button>
               </div>
             </div>
@@ -435,7 +437,9 @@
             <div
               class="bg-[#299764] w-[730px] rounded-r-[20px] pt-[50px] pl-[200px] flex gap-5 justify-center items-start overflow-hidden"
             >
-              <div class="bg-white w-[420px] p-6 rounded-2xl h-[333px]">
+              <div
+                class="bg-white dark:bg-[#1C1C1C] dark:text-white w-[420px] p-6 rounded-2xl h-[333px]"
+              >
                 <div class="flex items-center justify-between">
                   <div class="flex gap-3 items-center justify-between">
                     <img
@@ -445,12 +449,18 @@
                     />
                     <div>
                       <p class="font-semibold">Savannah Nguyen</p>
-                      <p class="text-sm font-normal text-[#555] mt-[5px]">
+                      <p
+                        class="text-sm font-normal text-[#555] mt-[5px] dark:text-white"
+                      >
                         savannahnguyen@gmail.com
                       </p>
                     </div>
                   </div>
-                  <img src="./images/icons/google.svg" alt="" />
+                  <div
+                    class="bg-white w-[42px] h-[42px] flex items-center justify-center rounded-full"
+                  >
+                    <img src="./images/icons/google.svg" alt="" />
+                  </div>
                 </div>
                 <p class="mt-[14px] w-[372px] h-[160px] text-sm">
                   Sagittis sed tortor, elementum vitae varius sodales
@@ -462,7 +472,9 @@
                   nunc, arcu vulputate massa.
                 </p>
 
-                <hr class="h-[2px] bg-[#E5E7EA] mt-[25px]" />
+                <div
+                  class="h-[2px] bg-[#E5E7EA] mt-[25px] dark:bg-[#333]"
+                ></div>
 
                 <div class="flex gap-4 mt-6">
                   <p class="text-sm font-medium">Start rating:</p>
@@ -476,7 +488,9 @@
                 </div>
               </div>
 
-              <div class="bg-white w-[420px] p-6 rounded-2xl h-[333px]">
+              <div
+                class="bg-white dark:bg-[#1C1C1C] dark:text-white w-[420px] p-6 rounded-2xl h-[333px]"
+              >
                 <div class="flex items-center justify-between">
                   <div class="flex gap-3 items-center justify-between">
                     <img
@@ -486,7 +500,9 @@
                     />
                     <div>
                       <p class="font-semibold">Ronald Richards</p>
-                      <p class="text-sm font-normal text-[#555] mt-[5px]">
+                      <p
+                        class="text-sm font-normal text-[#555] mt-[5px] dark:text-white"
+                      >
                         ronaldrichards@gmail.com
                       </p>
                     </div>
@@ -499,7 +515,9 @@
                   auctor odio a ornare felis tortor bibendum molestie.
                 </p>
 
-                <hr class="h-[2px] bg-[#E5E7EA] mt-[25px]" />
+                <div
+                  class="h-[2px] bg-[#E5E7EA] mt-[25px] dark:bg-[#333]"
+                ></div>
 
                 <div class="flex gap-4 mt-6">
                   <p class="text-sm font-medium">Start rating:</p>
@@ -513,7 +531,7 @@
                 </div>
               </div>
 
-              <!-- <div class="bg-white w-[420px] p-6 rounded-2xl h-[333px]">
+              <!-- <div class="bg-white dark:bg-[#1C1C1C] dark:text-white w-[420px] p-6 rounded-2xl h-[333px]">
                 <div class="flex items-center justify-between">
                   <div class="flex gap-3 items-center justify-between">
                     <img
@@ -523,7 +541,7 @@
                     />
                     <div>
                       <p class="font-semibold">Kristin Watson</p>
-                      <p class="text-sm font-normal text-[#555] mt-[5px]">
+                      <p class="text-sm font-normal text-[#555] dark:text-white mt-[5px]">
                         kristinwatson@gmail.com
                       </p>
                     </div>
@@ -539,7 +557,8 @@
                   ac cras arcu.
                 </p>
 
-                <hr class="h-[2px] bg-[#E5E7EA] mt-[25px]" />
+                <div class="h-[2px] bg-[#E5E7EA] mt-[25px] dark:bg-[#333]"></div>
+
 
                 <div class="flex gap-4 mt-6">
                   <p class="text-sm font-medium">Start rating:</p>
@@ -557,10 +576,12 @@
         </div>
       </section>
 
-      <section class="brands mt-[160px]">
+      <section class="brands mt-[160px] dark:text-white">
         <div class="container mx-auto">
           <h1 class="text-2xl font-medium">More than 50 brands of cars</h1>
-          <div class="flex items-center justify-between gap-[50px] mt-[34px]">
+          <div
+            class="brand__images flex items-center justify-between gap-[50px] mt-[34px]"
+          >
             <img src="./images/ford.png" alt="" />
             <img
               src="./images/nissan-black.svg"
@@ -575,7 +596,7 @@
         </div>
       </section>
 
-      <section class="service mt-[160px]">
+      <section class="service mt-[160px] dark:text-white">
         <div class="container mx-auto">
           <h1 class="text-4xl font-semibold text-center">
             Unparalleled service
@@ -588,13 +609,15 @@
 
           <div class="flex flex-wrap gap-5 justify-center mt-10">
             <div
-              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
+              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] dark:bg-[#272727] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
             >
               <div>
                 <h2 class="font-medium text-[32px] w-[211px]">
                   Book online, pay online
                 </h2>
-                <p class="p-white w-[354px] text-[#555] mt-[10px]">
+                <p
+                  class="p-white w-[354px] text-[#555] mt-[10px] dark:text-white"
+                >
                   Complete the booking process A-Z, with our easy online system
                 </p>
               </div>
@@ -616,13 +639,15 @@
             </div>
 
             <div
-              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
+              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] dark:bg-[#272727] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
             >
               <div>
                 <h2 class="font-medium text-[32px] w-[260px]">
                   Guaranteed car reservation
                 </h2>
-                <p class="p-white w-[354px] text-[#555] mt-[10px]">
+                <p
+                  class="p-white w-[354px] text-[#555] mt-[10px] dark:text-white"
+                >
                   When you book with Car rental, you can be confident your car
                   will be waiting for you
                 </p>
@@ -642,13 +667,15 @@
             </div>
 
             <div
-              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
+              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] dark:bg-[#272727] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
             >
               <div>
                 <h2 class="font-medium text-[32px] w-[278px]">
                   Unparalleled customer service
                 </h2>
-                <p class="p-white w-[354px] text-[#555] mt-[10px]">
+                <p
+                  class="p-white w-[354px] text-[#555] mt-[10px] dark:text-white"
+                >
                   We're here to help. We pride ourselves in our customer service
                 </p>
               </div>
@@ -681,13 +708,15 @@
             </div>
 
             <div
-              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
+              class="service-card py-10 pl-8 pr-10 bg-[#F5F5F5] dark:bg-[#272727] flex gap-[108px] rounded-[20px] hover:bg-[#299764] hover:text-white hover:duration-300"
             >
               <div>
                 <h2 class="font-medium text-[32px] w-[288px]">
                   No reservation or booking fees
                 </h2>
-                <p class="p-white w-[354px] text-[#555] mt-[10px]">
+                <p
+                  class="p-white w-[354px] text-[#555] mt-[10px] dark:text-white"
+                >
                   No cancellation fees if cancelled 24 hours prior to booking
                   time
                 </p>
@@ -715,17 +744,17 @@
         </div>
       </section>
 
-      <section class="mt-[160px]">
+      <section class="mt-[160px] dark:text-white">
         <div class="container mx-auto">
           <div
-            class="flex justify-center w-full pt-10 rounded-[20px] border-[#E5E7EA] border-[2px]"
+            class="flex justify-center w-full pt-10 rounded-[20px] border-[#E5E7EA] border-[2px] dark:border-[#333]"
           >
             <div class="w-[60%] flex flex-col gap-[94px]">
               <div>
                 <h2 class="text-4xl font-semibold">
                   Car rental keeps you safe
                 </h2>
-                <p class="text-[#555] w-[590px] mt-[10px]">
+                <p class="text-[#555] w-[590px] mt-[10px] dark:text-white">
                   The safety of our employees and renters is our number one
                   priority. In addition to being confident your vehicle is
                   cleaned and sanitized every time you rent, you can also feel
@@ -737,10 +766,11 @@
 
               <div class="flex gap-[10px]">
                 <div
-                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] rounded-2xl hover:text-white hover:bg-[#299764] hover:duration-300"
+                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] dark:bg-[#272727] rounded-2xl hover:text-white hover:bg-[#299764] hover:duration-300"
                 >
                   <div class="flex justify-end">
                     <svg
+                      class="svg"
                       width="18"
                       height="25"
                       viewBox="0 0 18 25"
@@ -762,10 +792,11 @@
                 </div>
 
                 <div
-                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] rounded-2xl hover:text-white hover:bg-[#299764] hover:duration-300"
+                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] dark:bg-[#272727] rounded-2xl hover:text-white hover:bg-[#299764] hover:duration-300"
                 >
                   <div class="flex justify-end">
                     <svg
+                      class="svg"
                       width="26"
                       height="19"
                       viewBox="0 0 26 19"
@@ -789,10 +820,11 @@
                 </div>
 
                 <div
-                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] rounded-2xl hover:text-white hover:bg-[#299764] hover:duration-300"
+                  class="card-bellow w-[200px] flex flex-col gap-[30px] p-[15px] pt-[20px] pr-[20px] bg-[#F5F5F5] dark:bg-[#272727] rounded-2xl hover:text-white hover:bg-[#299764] hover:duration-300"
                 >
                   <div class="flex justify-end">
                     <svg
+                      class="svg"
                       width="26"
                       height="20"
                       viewBox="0 0 26 20"
@@ -834,11 +866,13 @@
       </section>
     </main>
 
-    <footer class="border-t mt-[160px] py-10">
+    <footer
+      class="border-t dark:border-[#333] mt-[160px] py-10 dark:text-white"
+    >
       <div class="container mx-auto flex gap-[65px]">
         <div class="">
           <img src="./images/Logo.svg" alt="" />
-          <p class="text-[#555] text-xs w-[240px] mt-5">
+          <p class="text-[#555] text-xs w-[240px] mt-5 dark:text-white">
             Car rental offers a wide range of cars available for rent in Newark
             EWR Airport NJ. We pride ourselves in our customer service, and
             hassle-free renting experience.
@@ -853,46 +887,64 @@
           <div class="flex gap-[110px]">
             <ul class="flex flex-col gap-3">
               <li class="font-medium mb-1">Main</li>
-              <li class="text-[#555]"><a href="#">My Bookings</a></li>
-              <li class="text-[#555]"><a href="#">Reservation</a></li>
+              <li class="text-[#555] dark:text-white">
+                <a href="#">My Bookings</a>
+              </li>
+              <li class="text-[#555] dark:text-white">
+                <a href="#">Reservation</a>
+              </li>
             </ul>
 
             <ul class="flex flex-col gap-3">
               <li class="font-medium mb-1">Categories</li>
-              <li class="text-[#555]"><a href="#">Compact</a></li>
-              <li class="text-[#555]"><a href="#">Sports cars</a></li>
-              <li class="text-[#555]"><a href="#">Vans</a></li>
+              <li class="text-[#555] dark:text-white">
+                <a href="#">Compact</a>
+              </li>
+              <li class="text-[#555] dark:text-white">
+                <a href="#">Sports cars</a>
+              </li>
+              <li class="text-[#555] dark:text-white"><a href="#">Vans</a></li>
             </ul>
 
             <ul class="flex flex-col gap-3">
               <li class="font-medium mb-1">Company</li>
-              <li class="text-[#555]"><a href="#">About us</a></li>
-              <li class="text-[#555]"><a href="#">Careers</a></li>
-              <li class="text-[#555]"><a href="#">News</a></li>
-              <li class="text-[#555]"><a href="#">Contact us</a></li>
+              <li class="text-[#555] dark:text-white">
+                <a href="#">About us</a>
+              </li>
+              <li class="text-[#555] dark:text-white">
+                <a href="#">Careers</a>
+              </li>
+              <li class="text-[#555] dark:text-white"><a href="#">News</a></li>
+              <li class="text-[#555] dark:text-white">
+                <a href="#">Contact us</a>
+              </li>
             </ul>
 
             <ul class="flex flex-col gap-3">
               <li class="font-medium mb-1">Our Locations</li>
-              <li class="text-[#555]">2118 Thornridge Cir. Syracuse</li>
-              <li class="text-[#555]">4140 Parker Rd. Allentown</li>
-              <li class="text-[#555]">4517 Washington Ave.</li>
+              <li class="text-[#555] dark:text-white">
+                2118 Thornridge Cir. Syracuse
+              </li>
+              <li class="text-[#555] dark:text-white">
+                4140 Parker Rd. Allentown
+              </li>
+              <li class="text-[#555] dark:text-white">4517 Washington Ave.</li>
             </ul>
           </div>
 
-          <hr class="" />
+          <div class="w-full h-[2px] bg-[#E5E7EA] dark:bg-[#333]"></div>
 
           <div class="flex gap-11">
             <ul class="flex flex-col gap-3">
               <li class="font-medium mb-1">Contact</li>
-              <li class="text-[#555]">+1 855 420 0000</li>
-              <li class="text-[#555]">carrental@gmail.com</li>
+              <li class="text-[#555] dark:text-white">+1 855 420 0000</li>
+              <li class="text-[#555] dark:text-white">carrental@gmail.com</li>
             </ul>
 
             <ul class="flex flex-col gap-3 mr-2">
               <li class="font-medium mb-1">Hours of operation</li>
-              <li class="text-[#555]">8:00 - 21:00 Mon-Sat</li>
-              <li class="text-[#555]">9:00 - 15:00 Sundays</li>
+              <li class="text-[#555] dark:text-white">8:00 - 21:00 Mon-Sat</li>
+              <li class="text-[#555] dark:text-white">9:00 - 15:00 Sundays</li>
             </ul>
 
             <ul class="flex flex-col gap-[22px] mr-[223px]">
@@ -900,7 +952,7 @@
               <li>
                 <ul class="flex gap-[15px]">
                   <li
-                    class="insta flex items-center justify-center w-10 h-10 rounded-full bg-black"
+                    class="insta__icon flex items-center justify-center w-10 h-10 rounded-full bg-black dark:bg-[#fff]"
                   >
                     <svg
                       width="20"
@@ -924,9 +976,10 @@
                     </svg>
                   </li>
                   <li
-                    class="tweeter flex items-center justify-center w-10 h-10 rounded-full bg-black"
+                    class="tweeter flex items-center justify-center w-10 h-10 rounded-full dark:bg-white bg-black"
                   >
                     <svg
+                      class="svg"
                       width="20"
                       height="16"
                       viewBox="0 0 20 16"
